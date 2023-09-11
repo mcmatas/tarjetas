@@ -19,13 +19,17 @@ La aplicación consta de __tres pantallas__ y un __menú lateral__ desplegable.
 Para instalar este proyecto, siga estos pasos:
 1. Clone el repositorio localmente utilizando el siguiente comando:
 
-``https://github.com/mcmatas/tarjetas.git``
+``git clone https://github.com/mcmatas/tarjetas.git``
 
 2. Una vez instalado, ingrese al directorio del proyecto utilizando:
 
 ``cd tarjetas``
 
-3. Finalmente, para ejecutar la aplicación, utilice el siguiente comando:
+3. Dentro del proyecto ejecutamos el siguiente comando para instalar todas las dependencias necesarios:
+
+``npm install`
+
+4. Finalmente, para ejecutar la aplicación, utilice el siguiente comando:
 
 ``ng serve -o``
 
