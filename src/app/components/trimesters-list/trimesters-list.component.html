@@ -1,0 +1,11 @@
+<h2 class="temario-title">Temario</h2>
+
+<section class="flex card-listing">
+
+    
+    <div *ngFor="let trimester of trimesters">
+        <app-trimester-item [trimestre]="trimester"></app-trimester-item> 
+    </div>
+
+
+</section>

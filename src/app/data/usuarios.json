@@ -1,0 +1,122 @@
+{
+    "nombre": "Maria",
+    "email": "maria@gmail.com",
+    "id": 11111,
+    "trimestres": [
+        {
+            "numero": 1,
+            "sesiones": [
+                {
+                    "numero": 1,
+                    "titulo": "Lorem ipsum",
+                    "completado": true
+                },
+                {
+                    "numero": 2,
+                    "titulo": "Lorem ippsum",
+                    "completado": true
+                },
+                {
+                    "numero": 49,
+                    "titulo": "Lorem ipsum",
+                    "completado": true
+                },
+                {
+                    "numero": 50,
+                    "titulo": "Lorem ipsum",
+                    "completado": true
+                }
+            ]
+        },
+        {
+            "numero": 2,
+            "sesiones": [
+                {
+                    "numero": 1,
+                    "titulo": "Lorem ipsum",
+                    "completado": true
+                },
+                {
+                    "numero": 2,
+                    "titulo": "Lorem ippsum",
+                    "completado": true
+                },
+                {
+                    "numero": 3,
+                    "titulo": "Lorem ippsum",
+                    "completado": true
+                },
+                {
+                    "numero": 4,
+                    "titulo": "Lorem ippsum",
+                    "completado": true
+                },
+                {
+                    "numero": 5,
+                    "titulo": "Lorem ippsum",
+                    "completado": true
+                },
+                {
+                    "numero": 6,
+                    "titulo": "Lorem ippsum",
+                    "completado": false
+                },
+                {
+                    "numero": 7,
+                    "titulo": "Lorem ippsum",
+                    "completado": false
+                },
+                {
+                    "numero": 8,
+                    "titulo": "Lorem ippsum",
+                    "completado": false
+                },
+                {
+                    "numero": 9,
+                    "titulo": "Lorem ippsum",
+                    "completado": false
+                },
+                {
+                    "numero": 10,
+                    "titulo": "Lorem ippsum",
+                    "completado": false
+                },
+                {
+                    "numero": 11,
+                    "titulo": "Lorem ipsum",
+                    "completado": false
+                },
+                {
+                    "numero": 12,
+                    "titulo": "Lorem ipsum",
+                    "completado": false
+                }
+            ]
+        },
+        {
+            "numero": 3,
+            "sesiones": [
+                {
+                    "numero": 1,
+                    "titulo": "Lorem ipsum",
+                    "completado": false
+                },
+                {
+                    "numero": 2,
+                    "titulo": "Lorem ippsum",
+                    "completado": false
+                },
+                {
+                    "numero": 49,
+                    "titulo": "Lorem ipsum",
+                    "completado": false
+                },
+                {
+                    "numero": 50,
+                    "titulo": "Lorem ipsum",
+                    "completado": false
+                }
+            ]
+        }
+    ]
+}

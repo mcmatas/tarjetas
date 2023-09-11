@@ -1,0 +1,12 @@
+
+<div class="back-page">
+    <p class="pointer" routerLink="/home"><i class="fa-solid fa-arrow-left"></i> Atrás</p>
+</div>
+
+<section class="sesion-grid">
+    
+    <app-trimester-item [trimestre]="currentTrimestre"></app-trimester-item>
+    
+    <app-sesion-details [trimestre]="currentTrimestre"></app-sesion-details>
+    
+</section>

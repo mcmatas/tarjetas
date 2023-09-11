@@ -1,0 +1,38 @@
+
+<div class="overlay" (click)="closeMenu()" [ngClass]="{'open': menuService.isOpen, 'closed': !menuService.isOpen}"></div>
+<div class="menu" [ngClass]="{'open': menuService.isOpen, 'closed': !menuService.isOpen}">
+
+    <div class="menu-title">
+        <h2><i class="fa-solid fa-arrow-left pointer" (click)="closeMenu()"></i> Configuración</h2>
+    </div>
+
+    <div class="menu-form">
+
+        <mat-form-field  appearance="outline">
+            <mat-label class="custom-select-text">Idioma</mat-label>
+            <mat-select value="esp">
+                <mat-option value="esp">Español</mat-option>
+                <mat-option value="cat">Català</mat-option>
+                <mat-option value="eng">English</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label class="custom-select-text">Curso</mat-label>
+            <mat-select value="1-3">
+                <mat-option value="1-3">3º de infantil</mat-option>
+                <mat-option value="1-4">4º de infantil</mat-option>
+                <mat-option value="1-5">5º de infantil</mat-option>
+            </mat-select>
+        </mat-form-field>
+            
+    </div>
+
+    <div class="menu-buttons">
+        <button class="btn btn-active-primary">Guardar cambios</button>
+        <a class="pointer" (click)="closeMenu()">Cerrar sin guardar</a>
+    </div>
+
+</div>
+
+  

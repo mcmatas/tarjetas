@@ -1,27 +1,43 @@
 # Tarjetas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+## Descripción
 
-## Development server
+Este proyecto es parte de una __prueba técnica__ para Tekman. 
+La aplicación consta de __tres pantallas__ y un __menú lateral__ desplegable.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- En la primera pantalla, se presenta una tarjeta principal que muestra la __sesión actual__, seguida de tres tarjetas secundarias que indican el __progreso global__ del curso. Los datos se obtienen de manera dinámica a partir de un archivo __JSON__ (utilizado para simular una base de datos, dado que el proyecto no requería una parte de backend). Esto permite la __adición y eliminación__ de trimestres y sesiones sin necesidad de realizar modificaciones en la parte frontal de la aplicación.
 
-## Code scaffolding
+- En la segunda pantalla, se muestra el estado de la __sesión actual__, con las clases ya __completadas__, destacando la __clase actual__ y desactivando las demás. Al hacer clic en la clase actual, se accede a la tercera pantalla.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- La __tercera pantalla__ tiene un enfoque principalmente informativo, con un __llamado a la acción__ para comenzar la clase.
 
-## Build
+- Al hacer clic en el __icono de engranaje__ en la barra de encabezado, se abre un __menú lateral__ que permite la selección del __idioma y del curso__.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Instalación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para instalar este proyecto, siga estos pasos:
+1. Clone el repositorio localmente utilizando el siguiente comando:
 
-## Running end-to-end tests
+``git clone``
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Una vez instalado, ingrese al directorio del proyecto utilizando:
 
-## Further help
+``cd tarjetas``
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Finalmente, para ejecutar la aplicación, utilice el siguiente comando:
+
+``ng serve -o``
+
+
+### Stack
+
+Las tecnologías empleadas en este proyecto incluyen:
+
+- __Angular__ (v16.2) como el framework principal.
+- __TypeScript__ para la programación del lado del cliente.
+- __HTML__ para la estructura de las páginas web.
+- __SASS__ para la generación de estilos y hojas de estilo.
+- __FontAwesome__ se utilizó para la incorporación de iconos en la interfaz.
+
+

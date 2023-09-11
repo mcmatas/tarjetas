@@ -1,0 +1,32 @@
+<div class="card sesion-details">
+    <div class="sesion-details__title">
+        <h2>Sesiones del {{ trimestre.numero }}º Trimestre</h2>
+        <p class="sesion-details__progress">{{ sesionesCompletadas }}/{{ trimestre.sesiones.length }}</p>
+    </div>
+    <div class="sesion-details__listing">
+        <div *ngFor="let sesion of sesiones">
+
+            <div *ngIf="getCurrentSesion() !== sesion.numero" [ngClass]="{'disabled': !sesion.completado}" class="sesion-details__listing--item pointer">
+                <p>
+                    <span>{{ sesion.numero }}</span>
+                    {{ sesion.titulo }}
+                </p>
+                <i *ngIf="sesion.completado" class="fa-regular fa-eye"></i>
+                <i *ngIf="!sesion.completado" class="fa-regular fa-eye-slash"></i>
+            </div>
+            
+
+            <div *ngIf="getCurrentSesion() === sesion.numero" [routerLink]="['/start']" class="sesion-details__listing--item pointer current">
+                <p>
+                    <span>{{ sesion.numero }}</span>
+                    {{ sesion.titulo }}
+                </p>
+                <div class="flex">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-circle-play"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

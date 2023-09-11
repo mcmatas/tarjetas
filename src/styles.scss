@@ -1,0 +1,453 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$tarjetas-primary: mat.define-palette(mat.$indigo-palette);
+$tarjetas-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$tarjetas-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$tarjetas-theme: mat.define-light-theme((
+  color: (
+    primary: $tarjetas-primary,
+    accent: $tarjetas-accent,
+    warn: $tarjetas-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($tarjetas-theme);
+
+
+
+/* VARIABLES */
+$primary_color: #fff;
+$secondary_color: #00AEA4;
+$accent_color: #F26C48;
+$background_color: #F0F0F0;
+$grey_medium: #656565;
+$grey_dark: #4F4F4F;
+$grey_darker: #3B3B3B;
+
+
+html, body {
+    margin: 0;
+    font-family: 'Roboto','Poppins', sans-serif;
+    background-color: $background_color;
+    overflow: hidden;
+    height: 100vh;
+    --mdc-outlined-text-field-focus-outline-color: #00AEA4;
+    --mat-option-selected-state-label-text-color: #000;
+    --mat-option-selected-state-layer-color: rgba(0, 0, 0, 0.00);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C4C4C4; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1; 
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.topbar {
+    background-color: $secondary_color;
+    padding: 1em 2em;
+
+    h1 {
+        color: $primary_color
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__navbar {
+            display: flex;
+            gap: 1em;
+
+            a {
+                color: $secondary_color;
+                background-color: $primary_color;
+                padding: 1em;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                box-shadow: 0px 5px rgba(0, 0, 0, .2);
+
+                &:hover {
+                    box-shadow: none;
+                    transform: translateY(3px);
+                }
+            }
+        }
+    }
+}
+
+.page {
+    &-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+.card {
+    padding: 2em;
+    border-radius: 0.625rem;
+    background-color: $primary_color;
+    margin-top: 3rem;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__class {
+        margin-bottom: 1.5rem;
+    }
+
+    &-single {
+        padding: 0.5em 0.5em 0.5em 1.5em;
+        box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+        height: fit-content;
+        margin-top: 0;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3B3B3B;
+            font-weight: bold;
+        }
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.temario-title {
+    margin: 2em 0 1em;
+}
+
+.flex {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.btn {
+    border: 2px solid $accent_color;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+
+    &-active {
+
+        &-primary {
+            background-color: $accent_color;
+            color: $primary_color;
+            box-shadow: 0px 4px 0px 0px #C7401B;
+
+            &:hover {
+                box-shadow: none;
+                background-color: #EA6541;
+                transform: translateY(1px);
+            }
+        }
+
+        &-secondary {
+            background-color: $primary_color;
+            color: $accent_color;
+
+            &:hover {
+                background: rgba(242, 108, 72, 0.10)
+            }
+        }
+    }
+}
+
+.circle {
+    position: relative;
+    transform: scale(.7);
+
+    .fa-check {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+        color: $primary_color;
+        font-size: 2rem;
+    }
+}
+
+.sesion {
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 2.2fr 5fr;
+        gap: 1em;
+        margin-top: 2em;
+    }
+
+    &-details {
+        padding: 0;
+        margin: 0;
+
+        &__title {
+            padding: .5em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #E0E0E0;
+        }
+
+        &__progress {
+            border-radius: 0.3125rem;
+            background: #ED993F;
+            color: #F2F2F2;
+            padding: 0.325rem 0.75rem;
+        }
+
+        &__listing {
+            padding: 1em 0;
+            max-height: 350px;
+            overflow-y: scroll;
+
+            &--item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2em;
+
+                &:hover {
+                    background: rgba(242, 108, 72, 0.10);
+                }
+
+                span {
+                    font-weight: bold;
+                    margin-right: .5em;
+                }
+
+                i {
+                    font-size: 1.5em;
+                }
+            }
+
+            &--item.current {
+                background-color: $accent_color;
+                color: white;
+            }
+        }
+    }
+}
+
+.back-page {
+    width: fit-content;
+    margin-top: 2em;
+    font-size: 1.25em;
+
+    i {
+        margin-right: .25em;
+    }
+
+    &:hover i {
+        transition: transform .2s ease-in-out;
+        transform: translateX(-10px);
+    }
+}
+
+.disabled {
+    i {
+        color: #a6a6a6;
+    }
+
+    &:hover {
+        background-color: rgba(116, 116, 116, 0.1);
+    }
+}
+
+.before-start {
+    text-align: center;
+    padding: 6em 0;
+    background-color: $primary_color;
+    height: 100vh;
+
+    &__title {
+        font-size: 2.5em;
+    }
+
+    .flex {
+        display: flex;
+        align-items: flex-start;
+        max-width: 800px;
+        margin: auto;
+        padding: 5em 0;
+        gap: 5em;
+        line-height: 1.5em;
+
+        & > div {
+            flex: 1;
+        }
+
+        i {
+            font-size: 2.5rem;
+            color: #00AEA4;
+            background-color: #F2F2F2;
+            padding: 1em;
+            border-radius: .5em;
+        }
+    }
+}
+
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+
+    &.open {
+        display: block;
+    }
+
+    &.closed {
+        display: none;
+    }
+}
+
+
+.menu {
+    width: 40%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    background-color: #fff;
+    color: #333;
+    transition: transform .5s ease-in-out; 
+    transform: translateX(-250px); 
+    z-index: 2;
+    box-shadow: -1px 0px 20px #333;
+    display: grid;
+    grid-template-rows: 1fr 5fr 2fr;
+
+    &.open {
+        transform: translateX(0); 
+    } 
+
+    &.closed {
+        transform: translateX(100%);
+        visibility: hidden;
+    }
+
+    &-title {
+        text-align: center;
+        margin: 1em 0 4em;
+
+        i {
+            position: absolute;
+            left: 1em;
+        }
+    }
+
+    &-form {
+        display: flex !important;
+        flex-direction: column;
+        max-width: 300px;
+        margin: auto;
+        gap: 2em;
+        height: 100%;
+        width: 100%;
+
+        .custom-select-text {
+            color: $grey_medium !important; 
+        }
+
+        .mdc-text-field--outlined {
+            --mdc-outlined-text-field-container-shape: 0px;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        max-width: 250px;
+        margin: 0 auto;
+        width: 100%;
+
+        .btn-active-primary {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+    }
+}
+
+.mat-mdc-option .mat-pseudo-checkbox-minimal {
+    display: none;
+}
+
+.mat-mdc-option:hover {
+    background-color: rgba(0, 0, 0, .1) !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+    border-left: 5px solid $secondary_color;
+    font-weight: 500;
+}
+
+div.mat-mdc-select-panel {
+    padding: 0 !important;
+}
