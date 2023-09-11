@@ -19,7 +19,7 @@ La aplicación consta de __tres pantallas__ y un __menú lateral__ desplegable.
 Para instalar este proyecto, siga estos pasos:
 1. Clone el repositorio localmente utilizando el siguiente comando:
 
-``git clone``
+``https://github.com/mcmatas/tarjetas.git``
 
 2. Una vez instalado, ingrese al directorio del proyecto utilizando:
 
