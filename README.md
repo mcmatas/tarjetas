@@ -27,7 +27,7 @@ Para instalar este proyecto, siga estos pasos:
 
 3. Dentro del proyecto ejecutamos el siguiente comando para instalar todas las dependencias necesarios:
 
-``npm install`
+``npm install``
 
 4. Finalmente, para ejecutar la aplicación, utilice el siguiente comando:
 
